@@ -28,7 +28,7 @@ ChartJS.register(
 );
 
 const endpoint =
-  "https://script.google.com/macros/s/AKfycbz4i9gJruuS-MMLKrW9Xc1E_VfZyNPM-UPLjAZGJXy2BQyIZy25zecksTDvfX3KoqflFw/exec";
+  "https://script.google.com/macros/s/AKfycbzqBLmXp_9jEhn8rb0uXn4T64oU58dCVV3ipD82kNrL6rXGI78sg7q7n9pG7ROF3Y_Y/exec";
 const SHEET_SEMESTER1 = "RekapSemester1";
 const SHEET_SEMESTER2 = "RekapSemester2";
 
@@ -1601,7 +1601,7 @@ const MonthlyRecapTab: React.FC<{
       ];
 
       // Calculate width for signatures
-      const signatureWidth = 50;
+      const signatureWidth = 30;
       const signatureHeight = 20;
       const leftColumnX = margin;
 
@@ -1610,7 +1610,7 @@ const MonthlyRecapTab: React.FC<{
         doc.addImage(
           schoolData.ttdKepsek,
           "PNG",
-          leftColumnX,
+          leftColumnX + 10,
           currentY,
           signatureWidth,
           signatureHeight
@@ -1634,7 +1634,7 @@ const MonthlyRecapTab: React.FC<{
         doc.addImage(
           schoolData.ttdGuru,
           "PNG",
-          rightColumnX,
+          rightColumnX + 10,
           currentY,
           signatureWidth,
           signatureHeight
@@ -2880,7 +2880,7 @@ const SemesterRecapTab: React.FC<{ uniqueClasses: string[] }> = ({
         `NIP: ${schoolData.nipGuru || "N/A"}`,
       ];
 
-      const signatureWidth = 50;
+      const signatureWidth = 30;
       const signatureHeight = 20;
       const leftColumnX = margin;
 
@@ -2888,7 +2888,7 @@ const SemesterRecapTab: React.FC<{ uniqueClasses: string[] }> = ({
         doc.addImage(
           schoolData.ttdKepsek,
           "PNG",
-          leftColumnX,
+          leftColumnX + 10,
           currentY,
           signatureWidth,
           signatureHeight
@@ -2907,7 +2907,7 @@ const SemesterRecapTab: React.FC<{ uniqueClasses: string[] }> = ({
         doc.addImage(
           schoolData.ttdGuru,
           "PNG",
-          rightColumnX,
+          rightColumnX + 10,
           currentY,
           signatureWidth,
           signatureHeight
@@ -3390,7 +3390,7 @@ const SplashScreen: React.FC = () => {
         className="w-52 h-70 mb-4 animate-pulse-custom" //Pengaturan ukuran logo
       />
       <p className="text-gray-800 text-lg font-semibold mt-6">
-        Aisyah, S.Pd. SD
+        Tunggu Sebentar
       </p>
     </div>
   );
